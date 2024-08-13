@@ -4,19 +4,13 @@ void calcularPerimetro(String figura, va1, [va2, va3]){
 
   double pi = 3.14;
   int v1 = int.parse(va1);
-  int v2 = va2;
-  int v3 = va3;
-  if (va2 != ''){
-    v2 = int.parse(va2);
-  }
-  if (v3 != ''){
-    v3 = int.parse(va3);
-  }
+  int v2 = int.parse(va2);
+  int v3 = int.parse(va3);
   
   switch(figura){
 
     case '1':
-      var resultado = v1 + v2 + v3;
+      int resultado = v1 + v2 + v3;
       print('O perimetro do seu Triangulo é $resultado');
       break;
 
@@ -57,20 +51,20 @@ void main(List<String> args) {
         print("Sua resposta foi 2-Circulo");
         print('Digite o Raio do círculo');
         var v1 = stdin.readLineSync();
-        calcularPerimetro('2', v1);
+        calcularPerimetro('2', v1, 0, 0);
         break;
       case '3':
         print("Sua resposta foi 3-Quadrado");
         print('Digite o tamanho do lado do quadrado: ');
         var v1 = stdin.readLineSync();
-        calcularPerimetro('3', v1);
+        calcularPerimetro('3', v1, 0 , 0);
         break;
       case '4':
         print("Sua resposta foi 4-Retangulo");
         print('Digite a base e a altura respectivamente: ');
         var v1 = stdin.readLineSync();
         var v2 = stdin.readLineSync();
-        calcularPerimetro('4', v1, v2);
+        calcularPerimetro('4', v1, v2, 0);
         break;
       default:
         print("Resposta indisponível");
