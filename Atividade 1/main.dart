@@ -8,22 +8,22 @@ void calcularPerimetro(String figura, int va1, [ int va2 = 0, int va3 = 0]){
 
     case '1':
       int resultado = va1 + va2 + va3;
-      print('O perimetro do seu Triangulo é $resultado');
+      imprimirResultados(resultado);
       break;
 
     case '2':
       var resultado = 2 * pi * va1;
-      print('O perimetro do seu Circulo é $resultado');
+      imprimirResultados(resultado);
       break;
 
     case '3':
       var resultado = 4 * va1;
-      print ('O perimetro do seu Quadrado é $resultado');
+      imprimirResultados(resultado);
       break;
 
     case '4':
       var resultado = 2 * va1 + 2 *va2;
-      print('O perimetro do seu retangulo é $resultado');
+      imprimirResultados(resultado);
       break;
   }
 
@@ -41,6 +41,7 @@ int lerValores(String descricao){
     }
 }
 
+void imprimirResultados (var resultado) => print('O perimetro da sua figura é: ${resultado}');
 
 void main(List<String> args) {
 
