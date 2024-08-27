@@ -10,10 +10,13 @@ ContaCorrente(super.agencia, super.numero, super.cliente, this.limite, [super.sa
   @override
   bool isSaldoSuficiente(double valor){
 
-  if(limite + saldo > valor){
+  if(limite + saldo >= valor){
     return true;
   }
   return false;
 }
+
+@override
+  String toString() => super.toString() + 'LimiteNegativo: $limite';
   
 }

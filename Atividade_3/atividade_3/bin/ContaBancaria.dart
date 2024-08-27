@@ -35,5 +35,7 @@ abstract class ContaBancaria{
 
   bool isSaldoSuficiente(double valor);
 
+  @override
+  String toString() => 'Agencia: $agencia Numero: $numero cliente: $cliente saldo: $saldo ';
 
 }
